@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
-    @IBAction func action(_ sender: AnyObject) {
+    @IBAction @objc func action(_ sender: AnyObject) {
         if (gameState[sender.tag-1] == 0 && gameIsActive == true)
         {
             
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var playAgainButton: UIButton!
     
-    @IBAction func playAgain(_ sender: Any)
+    @IBAction @objc func playAgain(_ sender: Any)
     {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
